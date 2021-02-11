@@ -16,8 +16,6 @@ html {
     font-size: 16px;
     line-height: 1.5;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    background-image: url('../images/bg-dark.png');
-    background-size: auto;
     text-rendering: optimizeLegibility;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -26,13 +24,16 @@ html {
     -moz-font-feature-settings: "liga" on;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
+body::before {
+	content:'';
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+  height: 100%;
+	z-index: -1;
+  background: linear-gradient(to right bottom, #A534A7, #21A5AD 75%);
+}
 
 ::-moz-selection {
     background: #b3d4fc;
@@ -111,6 +112,7 @@ h1, .h1 {
  font-size: 32px;
  line-height: 40px;
  font-weight: 700;
+ margin-top: 48px;
 }
 h2, .h2 {
  font-size: 20px;
@@ -242,10 +244,6 @@ li {
   z-index: 100;
 }
 
-.main-section {
-  margin-top: 48px;
-}
-
 .footer {
   padding: 48px 0;
   color: rgba(255,255,255,0.5);
@@ -253,14 +251,14 @@ li {
 
 
 @media (prefers-color-scheme: dark) {
-  html {
-    background-image: url('../images/bg-dark.png');
+  body::before {
+    background: linear-gradient(to right bottom, #A534A7, #21A5AD 75%);
   }
 }
 
 @media (prefers-color-scheme: light) {
-  html {
-    background-image: url('../images/bg-light.png');
+  body::before {
+    background: linear-gradient(to right bottom, #D446D7, #41DDE7 75%);
   }
 }
 
@@ -300,7 +298,7 @@ li {
       align-self: center;
     }
 
-    .main-section {
+    h1 {
       margin-top: 24px;
     }
 
