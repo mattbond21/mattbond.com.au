@@ -21,12 +21,14 @@
 
 @font-face {
     font-family: "AirbnbCereal-Bold";
-    src: url("../fonts/AirbnbCereal-Bold.woff2") format("woff2")
+    src: url("../fonts/AirbnbCereal-Bold.woff2") format("woff2");
+    src: url("../fonts/AirbnbCereal-Bold.ttf") format('truetype');
 }
 
 @font-face {
     font-family: "AirbnbCereal-Medium";
-    src: url("../fonts/AirbnbCereal-Medium.woff2") format("woff2")
+    src: url("../fonts/AirbnbCereal-Medium.woff2") format("woff2");
+    src: url("../fonts/AirbnbCereal-Medium.ttf") format('truetype');
 }
 
 
@@ -60,6 +62,7 @@ h2 {
   margin-top: 24px;
   margin-bottom: 0px;
   text-align: left;
+  letter-spacing: -0.5px;
 }
 
 h1 {
@@ -336,11 +339,13 @@ li {
 
     .job-item {
       flex-direction: column;
+      margin-bottom: 96px;
     }
 
     .job-details {
       flex: 1;
-      margin-bottom: 32px;
+      margin-bottom: 16px;
+      margin-right: 0;
     }
 
     h1 {
@@ -365,14 +370,14 @@ li {
 
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 680px) {
 
     html {
       font-size: 16px;
     }
 
     h1 {
-      font-size: 32px;
+      font-size: 30px;
     }
 
     h2 {
