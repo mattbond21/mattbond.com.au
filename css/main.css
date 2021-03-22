@@ -406,6 +406,13 @@ li {
       height: 96px;
     }
 
+    .job-image {
+      border-radius: 8px;
+    }
+
+    .job-image > img {
+      border-radius: 7px;
+    }
 
 }
 
