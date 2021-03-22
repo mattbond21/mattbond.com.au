@@ -146,6 +146,7 @@ span.heading-border {
 .avatar {
   flex: 0 0 160px;
   margin-right: 72px;
+  align-self: center;
 }
 
 .avatar-crop {
